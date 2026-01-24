@@ -35,19 +35,22 @@ public class Veiculo {
 
     public void ativar(){
         this.ativo = true;
+        this.status = disponivel;
     }
 
     public void desativar(){
         this.ativo = false;
+        this.status = indisponivel;
     }
 
     public void cadastrarVeiculo(){
-
-    }
-
-    public void desativarVeiculo(){
-
-    }
+            if (this.placa != null && !this.placa.isEmpty()) {
+                this.ativo = true;
+                this.status = disponivel;
+            } else {
+                new IllegalArgumentException("Placa inválida");
+            }
+        }
 
     public String getPlaca() {
         return placa;

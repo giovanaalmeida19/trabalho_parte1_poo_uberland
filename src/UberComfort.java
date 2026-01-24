@@ -1,4 +1,4 @@
-public class UberComfort extends Veiculo{
+public class UberComfort extends Veiculo {
     private boolean espaco_extra;
     private boolean banco_reclinavel;
     private boolean arcondicionado_dz;
@@ -15,7 +15,11 @@ public class UberComfort extends Veiculo{
     }
 
     public double calculaValorViagem(double nro_km) {
-        return nro_km * custo_km + tarifa;
+        if (arcondicionado_dz || espaco_extra){
+            return nro_km * custo_km + tarifa;
+        }
+
+        return nro_km * custo_km + tarifa + 2 * tarifa;
     }
 
     public boolean isEspaco_extra() {

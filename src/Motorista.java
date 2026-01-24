@@ -21,7 +21,7 @@ public class Motorista {
         setAniversario(aniversario);
         setNome_social(nome_social);
         setAtivo(ativo);
-        //setVeiculos(veiculos);
+        setVeiculos((List<Veiculo>) veiculos);
     }
 
     public void desativar() {
@@ -92,7 +92,15 @@ public class Motorista {
     }
 
     public void setVeiculos(List<Veiculo> veiculos) {
-        this.veiculos = veiculos;
+        if (veiculos != null){
+            this.veiculos = new ArrayList<>(veiculos);
+        }
+    }
+
+    public void addVeiculos (Veiculo veiculo){
+        if(veiculo != null){
+            this.veiculos.add(veiculo);
+        }
     }
 
     public String getNome_social() {
@@ -100,7 +108,7 @@ public class Motorista {
     }
 
     public void setNome_social(String nome_social) {
-        if(nome_social.length() > 0){
+        if(nome_social != null && nome_social.length() > 0){
             this.nome_social = nome_social;
         }
     }
@@ -134,7 +142,7 @@ public class Motorista {
     }
 
     public void setNome(String nome) {
-        if (nome.length() > 0){
+        if (nome!= null && nome.length() > 0){
             this.nome = nome;
         }
     }
