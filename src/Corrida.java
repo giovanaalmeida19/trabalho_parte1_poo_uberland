@@ -1,19 +1,22 @@
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.Duration;
+import java.time.LocalDate;
+
 public class Corrida {
     private String origem;
     private String destino;
-    private String data;
-    private String hora;
+    private LocalDate data;
+    private LocalTime hora_chegada_origem;
+    private LocalTime hora_chegada_destino;
+    private LocalTime tempo_de_viagem;
 
-    public double calculaValorViagem(double km){
-        return 0.0; //nro_km * custo_km + tarifa;
-    }
-
-
-    public Corrida (Cliente cliente, Veiculo veiculo, String origem, String destino, String data, String hora){
+    public Corrida(Cliente cliente, Veiculo veiculo, String origem, String destino, LocalDate data, LocalTime hora) {
         setData(data);
         setDestino(destino);
-        setHora(hora);
-        setOrigem(origem);
+        setHora_chegada_origem(hora_chegada_origem);
+        setHora_chegada_destino(hora_chegada_destino);
+        setTempo_de_viagem(tempo_de_viagem);
     }
 
     public String getOrigem() {
@@ -32,19 +35,37 @@ public class Corrida {
         this.destino = destino;
     }
 
-    public String getData() {
+    public LocalDate getData() {
         return data;
     }
 
-    public void setData(String data) {
+    public void setData(LocalDate data) {
         this.data = data;
     }
 
-    public String getHora() {
-        return hora;
+    public LocalTime getHora_chegada_origem() {
+        return hora_chegada_origem;
     }
 
-    public void setHora(String hora) {
-        this.hora = hora;
+    public void setHora_chegada_origem(LocalTime hora_chegada_origem) {
+        this.hora_chegada_origem = hora_chegada_origem;
+    }
+
+    public LocalTime getHora_chegada_destino() {
+        return hora_chegada_destino;
+    }
+
+    public void setHora_chegada_destino(LocalTime hora_chegada_destino) {
+        this.hora_chegada_destino = hora_chegada_destino;
+    }
+
+    public LocalTime getTempo_de_viagem() {
+        return tempo_de_viagem;
+    }
+
+    public void setTempo_de_viagem(LocalTime tempo_de_viagem) {
+        this.tempo_de_viagem = tempo_de_viagem;
     }
 }
+
+

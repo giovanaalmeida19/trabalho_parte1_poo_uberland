@@ -12,6 +12,10 @@ public class UberX extends Veiculo{
         setCusto_km(custo_km);
     }
 
+    public double calculaValorViagem(double nro_km) {
+        return nro_km * custo_km + tarifa;
+    }
+
     public boolean isArcondicionado() {
         return arcondicionado;
     }

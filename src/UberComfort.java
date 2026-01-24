@@ -14,6 +14,10 @@ public class UberComfort extends Veiculo{
         setCusto_km(custo_km);
     }
 
+    public double calculaValorViagem(double nro_km) {
+        return nro_km * custo_km + tarifa;
+    }
+
     public boolean isEspaco_extra() {
         return espaco_extra;
     }

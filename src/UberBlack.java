@@ -11,6 +11,10 @@ public class UberBlack extends Veiculo {
         setCusto_km(custo_km);
     }
 
+    public double calculaValorViagem(double nro_km) {
+        return nro_km * custo_km + tarifa;
+    }
+
     public double getTarifa() {
         return tarifa;
     }

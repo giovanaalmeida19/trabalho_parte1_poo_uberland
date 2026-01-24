@@ -12,6 +12,7 @@ public class Cliente {
     private double nota;
     public int nro_corridas;
 
+
     public Cliente (){
 
     }
@@ -92,7 +93,7 @@ public class Cliente {
     }
 
     public boolean cliente_vip(int nro_corridas){
-        return (nro_corridas > 10);
+        return (nro_corridas > 100);
     }
 
     public String getEmail() {
