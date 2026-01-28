@@ -2,7 +2,7 @@ import javax.swing.*;
 
 public class Veiculo {
     /*
-    Strings para indicar qual é o status do veículo, se está disponível, em viagem, indisponível ou terminando uma viagem.
+    "Strings" para indicar qual é o status do veículo, se está disponível, em viagem, indisponível ou terminando uma viagem.
      */
 
     private String disponivel = "Disponível";
@@ -21,7 +21,7 @@ public class Veiculo {
     private String modelo;
     private String status; // se o carro estará disponível, não disponível, em viagem ou finalizando viagem
     private boolean ativo;
-    private Motorista motorista;
+    private Motorista motorista; // cada veículo é vinculado a apenas um motorista
 
     public Veiculo (String placa, String chassi, String cor, int capacidade, String marca, String modelo, boolean disponivel, boolean status, Motorista motorista){
         setPlaca(placa);
@@ -51,7 +51,7 @@ public class Veiculo {
                 this.status = disponivel; */ // queria saber se essa parte que comentei, posso simplesmente trocar pelo método criado acima.
                 ativar();
             } else {
-                JOptionPane.showMessageDialog(null, "ERRO!", "Insira uma placa válida para seu veículo", JOptionPane.ERROR_MESSAGE); // interface gráfica que irá alertar o usuário que não é possível cadastrar devido à placa ter sido inserida de forma incorreta
+                JOptionPane.showMessageDialog(null, "ERRO!", "Insira uma placa válida para seu veículo", JOptionPane.ERROR_MESSAGE); // interface gráfica que irá alertar o utilizador que não é possível cadastrar devido à placa ter sido inserida de forma incorreta
             }
         }
 

@@ -12,7 +12,7 @@ public class Corrida {
     private String viagem_cancelada_andamento = "Viagem cancelada durante andamento.";
     private String viagem_finalizada = "Viagem finalizada.";
 
-    // Obejtos necessários para que uma viagem aconteça
+    // Objetos necessários para que uma viagem aconteça
 
     private Cliente cliente;
     private Veiculo veiculo;
@@ -28,21 +28,6 @@ public class Corrida {
     private LocalTime tempo_de_viagem;
     private double distancia_percorrida; // distância percorrida durante a corrida em km
 
-    public double getDistancia_percorrida() {
-        return distancia_percorrida;
-    }
-
-    public void setDistancia_percorrida(double distancia_percorrida) {
-        this.distancia_percorrida = distancia_percorrida;
-    }
-
-    public String getCancelamento() {
-        return cancelamento;
-    }
-
-    public void setCancelamento(String cancelamento) {
-        this.cancelamento = cancelamento;
-    }
 
     // Atributos relacionados à parte financeira das viagens
 
@@ -212,6 +197,22 @@ public class Corrida {
         if (gorjeta > 0){
             this.gorjeta = gorjeta;
         }
+    }
+
+    public double getDistancia_percorrida() {
+        return distancia_percorrida;
+    }
+
+    public void setDistancia_percorrida(double distancia_percorrida) {
+        this.distancia_percorrida = distancia_percorrida;
+    }
+
+    public String getCancelamento() {
+        return cancelamento;
+    }
+
+    public void setCancelamento(String cancelamento) {
+        this.cancelamento = cancelamento;
     }
 }
 

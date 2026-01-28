@@ -18,7 +18,7 @@ public class ClienteVip extends Cliente{
         }
     }
 
-    // o cliente vip tem um desconto nas viagens, caso o cliente
+    // O cliente vip tem um desconto nas viagens, caso o cliente
     //se torne um ClienteVip, será importante armazenar a porcentagem de desconto que esse
     //Cliente terá. A porcentagem de desconto segue uma estratégia confidencial da UberLand.
     //Crie a regra para essa estratégia.
