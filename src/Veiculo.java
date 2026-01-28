@@ -1,3 +1,5 @@
+import javax.swing.*;
+
 public class Veiculo {
     /*
     Strings para indicar qual é o status do veículo, se está disponível, em viagem, indisponível ou terminando uma viagem.
@@ -49,7 +51,7 @@ public class Veiculo {
                 this.status = disponivel; */
                 ativar();
             } else {
-                new IllegalArgumentException("Placa inválida"); // interface gráfica que irá alertar o usuário que não é possível cadastrar devido à placa ter sido inserida de forma incorreta
+                JOptionPane.showMessageDialog(null, "ERRO!", "Insira uma placa válida para seu veículo", JOptionPane.ERROR_MESSAGE); // interface gráfica que irá alertar o usuário que não é possível cadastrar devido à placa ter sido inserida de forma incorreta
             }
         }
 

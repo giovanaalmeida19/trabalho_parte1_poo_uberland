@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.lang.String; //  utilizado para escrever os atributos em formato de String
 import java.util.ArrayList; // utilizado para implementação da lista de veículos que o mmotorista pode ter
 import java.time.LocalDate; // usado para indicar a data de nascimento do motorista
@@ -22,7 +23,7 @@ public class Motorista {
         setNome_social(nome_social);
         setAtivo(ativo);
         setVeiculos((List<Veiculo>) veiculos); // como o motorista pode possui vários veículos, utilizamos o método set com uma lista de veículos
-    }
+    } // construtor utilizado para inicializar os atributos dos objetos do tipo Motorista, utilizando os setters, uma estratégia de encapsulamento
 
     public void desativar() {
         this.ativo = false; // deixa o veículo do motorista inativo
@@ -78,7 +79,7 @@ public class Motorista {
 
     public void setCpf(String cpf) {
         if(cpf == null){ // se o cpf inserido for null...
-            return;
+            JOptionPane.showMessageDialog(null, "ERRO!", "Insira um CPF válido.", JOptionPane.ERROR_MESSAGE);
         }
 
         else {
@@ -96,6 +97,7 @@ public class Motorista {
         if (veiculos != null){ // caso os veículos existam, ou seja, não são null...
             this.veiculos = new ArrayList<>(veiculos); // criamos a lista de veiculos
         }
+        else JOptionPane.showMessageDialog(null, "ERRO!", "Erro ao criar veículo.", JOptionPane.ERROR_MESSAGE);
     }
 
     public void addVeiculos (Veiculo veiculo){
@@ -149,6 +151,7 @@ public class Motorista {
         if (nome!= null && nome.length() > 0){ // se o nome não for vazio nem inválido...
             this.nome = nome;
         }
+        else JOptionPane.showMessageDialog(null, "ERRO!", "Insira um nome social válido.", JOptionPane.ERROR_MESSAGE);
     }
 
     public String getAniversario() {

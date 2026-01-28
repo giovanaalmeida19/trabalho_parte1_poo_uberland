@@ -1,7 +1,19 @@
 public class ClienteVip extends Cliente{
+    private double percentualDesconto;
 
     public ClienteVip(String nome, String cpf){
         super(nome, cpf);
+        setPercentualDesconto(percentualDesconto);
+    }
+
+    public double getPercentualDesconto() {
+        return percentualDesconto;
+    }
+
+    public void setPercentualDesconto(double percentualDesconto) {
+        if(nro_corridas == 1.01 * nro_corridas){
+            this.percentualDesconto = percentualDesconto;
+        }
     }
 
     // o cliente vip tem um desconto nas viagens, caso o cliente

@@ -1,7 +1,7 @@
 public class UberX extends Veiculo{
     private boolean arcondicionado;
     private boolean conforto_basico;
-    private double tarifa;
+    private double  tarifa;
     private double custo_km;
 
     public UberX(String placa, String chassi, String cor, int capacidade, String marca, String modelo, boolean disponivel, boolean status, Motorista motorista, double tarifa, double custo_km){

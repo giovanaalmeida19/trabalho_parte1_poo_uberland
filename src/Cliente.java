@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.lang.String;
 import java.time.LocalDate; // usado para indicar a data de nascimento do cliente
 
@@ -27,9 +28,10 @@ public class Cliente {
     }
 
     public void setNome(String nome) {
-        if(nome.length() > 0){ // verificação por meio do comprimento da palavra inserida
+        if(nome != null && nome.length() > 0){ // verificação por meio do comprimento da palavra inserida
             this.nome = nome;
         }
+        else JOptionPane.showMessageDialog(null, "ERRO!", "Insira um nome válido.", JOptionPane.ERROR_MESSAGE);
     }
 
     public String getFone() {
@@ -82,7 +84,7 @@ public class Cliente {
 
     public void setCpf(String cpf) {
         if(cpf == null){
-            return;
+            JOptionPane.showMessageDialog(null, "ERRO!", "Insira um CPF válido.", JOptionPane.ERROR_MESSAGE);
         }
 
         else {

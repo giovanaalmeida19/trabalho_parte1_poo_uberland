@@ -1,6 +1,6 @@
 public class UberBlack extends Veiculo {
-    private double tarifa;
-    private double custo_km;
+    private static double tarifa;
+    private static double custo_km;
     private double capacidade_malas;
     private boolean interior_premium;
     private boolean rodas_liga_leve;
