@@ -11,7 +11,9 @@ public class Endereco {
         setNumero(numero);
         setCidade(cidade);
         setBairro(bairro);
-    }
+    } // construtor que inicializa os atributos dos objetos do tipo endereço
+
+    // Getters e setters, utilizando os conceitos de encapsulamento
 
     public String getLogradouro() {
         return logradouro;

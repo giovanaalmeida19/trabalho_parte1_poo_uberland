@@ -1,7 +1,7 @@
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.time.Duration;
-import java.time.LocalDate;
+import java.time.Duration; // utilizado para indicar o tempo de duração de uma viagem
+import java.time.LocalDate; // utilziado para indicar a hora que a viagem começa e que hora a viagem termina
 
 public class Corrida {
     private String origem;

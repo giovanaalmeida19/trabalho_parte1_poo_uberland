@@ -34,21 +34,22 @@ public class Veiculo {
     }
 
     public void ativar(){
-        this.ativo = true;
-        this.status = disponivel;
+        this.ativo = true; // o carro acaba de ser ativado no aplicativo,
+        this.status = disponivel; // ou seja, acaba de se tornar disponível para realizar uma viagem
     }
 
     public void desativar(){
-        this.ativo = false;
-        this.status = indisponivel;
+        this.ativo = false; // o carro não está ativo no aplicativo,
+        this.status = indisponivel; // ou seja, não está disponível para realizar viagens
     }
 
     public void cadastrarVeiculo(){
-            if (this.placa != null && !this.placa.isEmpty()) {
-                this.ativo = true;
-                this.status = disponivel;
+            if (this.placa != null && !this.placa.isEmpty()) { // se a placa não for inválida, e não tiver um nome vazio...
+               /* this.ativo = true;
+                this.status = disponivel; */
+                ativar();
             } else {
-                new IllegalArgumentException("Placa inválida");
+                new IllegalArgumentException("Placa inválida"); // interface gráfica que irá alertar o usuário que não é possível cadastrar devido à placa ter sido inserida de forma incorreta
             }
         }
 

@@ -1,6 +1,6 @@
-import java.lang.String;
-import java.util.ArrayList;
-import java.time.LocalDate;
+import java.lang.String; //  utilizado para escrever os atributos em formato de String
+import java.util.ArrayList; // utilizado para implementação da lista de veículos que o mmotorista pode ter
+import java.time.LocalDate; // usado para indicar a data de nascimento do motorista
 import java.util.List;
 
 public class Motorista {
@@ -11,7 +11,7 @@ public class Motorista {
     private String aniversario;
     private String nome_social;
     private boolean ativo;
-    private ArrayList<Veiculo> veiculos;
+    private ArrayList<Veiculo> veiculos; // cada motorista pode ter cadastrado mais de um veículo, ou seja, um motorista pode estar vinculado a uma losta de veículos
 
     public Motorista (String cpf, Endereco endereco, String cnh, String nome, String aniversario, String nome_social, Veiculo veiculos){
         setCpf(cpf);
@@ -21,13 +21,14 @@ public class Motorista {
         setAniversario(aniversario);
         setNome_social(nome_social);
         setAtivo(ativo);
-        setVeiculos((List<Veiculo>) veiculos);
+        setVeiculos((List<Veiculo>) veiculos); // como o motorista pode possui vários veículos, utilizamos o método set com uma lista de veículos
     }
 
     public void desativar() {
-        this.ativo = false;
-        for (int i = 0; i < veiculos.size(); i++) {
-            Veiculo veiculo = veiculos.get(i);
+        this.ativo = false; // deixa o veículo do motorista inativo
+        for (int i = 0; i < veiculos.size(); i++) { // para a quantidade de veículos que o motorista possui, do primeiro ao último
+            Veiculo veiculo = veiculos.get(i); // pegamos o índice desse veículo
+            veiculo.desativar(); // utilizamos recursividade para o veículo que acabamos de encontrar o índice e o deixamos inativo.
         }
     }
 
@@ -76,12 +77,12 @@ public class Motorista {
     }
 
     public void setCpf(String cpf) {
-        if(cpf == null){
+        if(cpf == null){ // se o cpf inserido for null...
             return;
         }
 
         else {
-            if(validacpf(cpf)){
+            if(validacpf(cpf)){ // caso o cpf realmente seja válido e tenha passado pela verificação com resultado válido...
                 this.cpf = cpf;
             }
         }
@@ -92,15 +93,18 @@ public class Motorista {
     }
 
     public void setVeiculos(List<Veiculo> veiculos) {
-        if (veiculos != null){
-            this.veiculos = new ArrayList<>(veiculos);
+        if (veiculos != null){ // caso os veículos existam, ou seja, não são null...
+            this.veiculos = new ArrayList<>(veiculos); // criamos a lista de veiculos
         }
     }
 
     public void addVeiculos (Veiculo veiculo){
         if(veiculo != null){
-            this.veiculos.add(veiculo);
+            this.veiculos.add(veiculo); // aqui, caso o veículo exista, adicionamos um veículo na lista de veículos criada anteriormente
         }
+
+        // veiculos = nome dado à lista de veículos criada
+        // veiculo = um novo objeto que será inserido na lista
     }
 
     public String getNome_social() {
@@ -108,7 +112,7 @@ public class Motorista {
     }
 
     public void setNome_social(String nome_social) {
-        if(nome_social != null && nome_social.length() > 0){
+        if(nome_social != null && nome_social.length() > 0){ // se o  nome não for vazio nem inválido...
             this.nome_social = nome_social;
         }
     }
@@ -142,7 +146,7 @@ public class Motorista {
     }
 
     public void setNome(String nome) {
-        if (nome!= null && nome.length() > 0){
+        if (nome!= null && nome.length() > 0){ // se o nome não for vazio nem inválido...
             this.nome = nome;
         }
     }

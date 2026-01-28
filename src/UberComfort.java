@@ -12,10 +12,10 @@ public class UberComfort extends Veiculo {
         setArcondicionado_dz(arcondicionado_dz);
         setTarifa(tarifa);
         setCusto_km(custo_km);
-    }
+    } // construtor criado para inicializar todos os atributos dos objetos do tipo UberComfort
 
-    public double calculaValorViagem(double nro_km) {
-        if (arcondicionado_dz || espaco_extra){
+    public double calculaValorViagemUberComfort(double nro_km) {
+        if (arcondicionado_dz || espaco_extra){ // caso o carro possua ar condicionado dual zone ou espaço extra
             return nro_km * custo_km + tarifa;
         }
 

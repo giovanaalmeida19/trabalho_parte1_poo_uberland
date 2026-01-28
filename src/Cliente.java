@@ -1,5 +1,5 @@
 import java.lang.String;
-import java.time.LocalDate;
+import java.time.LocalDate; // usado para indicar a data de nascimento do cliente
 
 public class Cliente {
     private String nome;
@@ -15,19 +15,19 @@ public class Cliente {
 
     public Cliente (){
 
-    }
+    } // construtor padrão, sem parâmetros
 
     public Cliente (String nome, String cpf){
         setNome(nome);
         setCpf(cpf);
-    }
+    } // construtor padrão com os atributos nome e cpf, encapsulados pelo uso dos setters
 
     public String getNome() {
         return nome;
     }
 
     public void setNome(String nome) {
-        if(nome.length() > 0){
+        if(nome.length() > 0){ // verificação por meio do comprimento da palavra inserida
             this.nome = nome;
         }
     }
@@ -86,14 +86,14 @@ public class Cliente {
         }
 
         else {
-            if(validacpf(cpf)){
+            if(validacpf(cpf)){ /*método implementado acima para validar se o cpf inserido pelo cliente é válido*/
                 this.cpf = cpf;
             }
         }
     }
 
     public boolean cliente_vip(int nro_corridas){
-        return (nro_corridas > 100);
+        return (nro_corridas > 100); // caso o cliente tenha mais do que 100 corridas no aplicativo da uberland, ele se torna um cliente vip
     }
 
     public String getEmail() {
