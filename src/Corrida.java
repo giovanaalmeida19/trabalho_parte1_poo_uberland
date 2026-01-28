@@ -6,7 +6,7 @@ import java.time.LocalDate; // utilziado para indicar a hora que a viagem começ
 
 public class Corrida {
 
-    // Strings que representam qual é o status da corrida
+    // "Strings" que representam qual é o status da corrida
 
     private String viagem_andamento = "Viagem em andamento.";
     private String viagem_cancelada_andamento = "Viagem cancelada durante andamento.";
@@ -18,7 +18,7 @@ public class Corrida {
     private Veiculo veiculo;
     private Motorista motorista;
 
-    // Informações que precisam ser armazenadas em relação à própria corrida em si
+    // Informações que precisam ser armazenadas relativamente à própria corrida em si
 
     private String origem;
     private String destino;

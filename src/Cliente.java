@@ -21,7 +21,19 @@ public class Cliente {
     public Cliente (String nome, String cpf){
         setNome(nome);
         setCpf(cpf);
-    } // construtor padrão com os atributos nome e cpf, encapsulados pelo uso dos setters
+    } // construtor padrão com os atributos nome e cpf, encapsulados pelo uso dos "setters"
+
+    public Cliente (String nome, String fone, String cpf, String email, LocalDate aniversario, String sexo, String pagamento, double nota, int nro_corridas){
+        setNome(nome);
+        setFone(fone);
+        setCpf(cpf);
+        setEmail(email);
+        setAniversario(aniversario);
+        setSexo(sexo);
+        setPagamento(pagamento);
+        setNota(nota);
+        setNro_corridas(nro_corridas);
+    } // construtor criado por nós para inicializar todos os atributos dos clientes, além dos já criados por exigência dos requisitos dados para o desenvolvimento do código
 
     public String getNome() {
         return nome;

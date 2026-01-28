@@ -48,7 +48,7 @@ public class Veiculo {
     public void cadastrarVeiculo(){
             if (this.placa != null && !this.placa.isEmpty()) { // se a placa não for inválida, e não tiver um nome vazio...
                /* this.ativo = true;
-                this.status = disponivel; */
+                this.status = disponivel; */ // queria saber se essa parte que comentei, posso simplesmente trocar pelo método criado acima.
                 ativar();
             } else {
                 JOptionPane.showMessageDialog(null, "ERRO!", "Insira uma placa válida para seu veículo", JOptionPane.ERROR_MESSAGE); // interface gráfica que irá alertar o usuário que não é possível cadastrar devido à placa ter sido inserida de forma incorreta

@@ -1,5 +1,5 @@
 import javax.swing.*;
-import java.lang.String; //  utilizado para escrever os atributos em formato de String
+import java.lang.String; //  utilizado para escrever os atributos em formato de "String"
 import java.util.ArrayList; // utilizado para implementação da lista de veículos que o mmotorista pode ter
 import java.time.LocalDate; // usado para indicar a data de nascimento do motorista
 import java.util.List;
@@ -23,7 +23,7 @@ public class Motorista {
         setNome_social(nome_social);
         setAtivo(ativo);
         setVeiculos((List<Veiculo>) veiculos); // como o motorista pode possui vários veículos, utilizamos o método set com uma lista de veículos
-    } // construtor utilizado para inicializar os atributos dos objetos do tipo Motorista, utilizando os setters, uma estratégia de encapsulamento
+    } // construtor utilizado para inicializar os atributos dos objetos do tipo Motorista, utilizando os "setters", uma estratégia de encapsulamento
 
     public void desativar() {
         this.ativo = false; // deixa o veículo do motorista inativo
@@ -114,7 +114,7 @@ public class Motorista {
     }
 
     public void setNome_social(String nome_social) {
-        if(nome_social != null && nome_social.length() > 0){ // se o  nome não for vazio nem inválido...
+        if(nome_social != null && nome_social.length() > 0){ // se o nome não for vazio nem inválido...
             this.nome_social = nome_social;
         }
     }

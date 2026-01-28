@@ -1,10 +1,12 @@
+import java.time.LocalDate;
+
 public class ClienteVip extends Cliente{
     private double percentualDesconto;
 
-    public ClienteVip(String nome, String cpf){
-        super(nome, cpf);
+    public ClienteVip(String nome, String fone, String cpf, String email, LocalDate aniversario, String sexo, String pagamento, double nota, int nro_corridas){
+        super(nome, fone, cpf, email, aniversario, sexo, pagamento, nota, nro_corridas);
         setPercentualDesconto(percentualDesconto);
-    }
+    } // constutor criado com todos os atributos que um cliente VIP deve ter, assim como o cliente normal.
 
     public double getPercentualDesconto() {
         return percentualDesconto;
